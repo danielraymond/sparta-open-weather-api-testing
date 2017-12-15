@@ -18,5 +18,5 @@ class WeatherByCity
 
 end
 
-x = WeatherByCity.new
-puts x.get_weather_by_city('London')
+# x = WeatherByCity.new
+# puts x.get_weather_by_city('London')
