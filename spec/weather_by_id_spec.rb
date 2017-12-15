@@ -4,7 +4,7 @@ describe 'Tests for data parsed from a weather api with data selected by city id
 
   before(:all) do
     @weatherdata = Weather.new.get_weather_by_id_service
-    @weatherdata.get_weather_by_id('2172797')
+    @weatherdata.get_weather_by_id(2172797)
   end
 
   it "Should return data in the form of a hash." do
