@@ -19,4 +19,8 @@ describe 'Tests for data parsed from a weather api with data selected by city na
     expect(@weatherdata.get_status_code_city).to eq(200)
   end
 
+  it "City name should be a string" do
+    expect(@weatherdata.get_city_name_city).to be_kind_of(String)
+  end
+
 end

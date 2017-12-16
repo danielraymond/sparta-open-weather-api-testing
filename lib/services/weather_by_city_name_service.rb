@@ -20,6 +20,10 @@ class WeatherByCity
     @weather_by_city_data['cod']
   end
 
+  def get_city_name_city
+    @weather_by_city_data['name']
+  end
+
 end
 
 # x = WeatherByCity.new
