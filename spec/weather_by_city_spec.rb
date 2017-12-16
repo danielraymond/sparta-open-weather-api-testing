@@ -7,8 +7,16 @@ describe 'Tests for data parsed from a weather api with data selected by city na
     @weatherdata.get_weather_by_city('London')
   end
 
+  it "print the data at the top" do
+    puts @weatherdata.get_all_data_city
+  end
+
   it "Should return data in the form of a hash." do
-    expect(@weatherdata.get_all_data).to be_kind_of(Hash)
+    expect(@weatherdata.get_all_data_city).to be_kind_of(Hash)
+  end
+
+  it "Status code should equal 200" do
+    expect(@weatherdata.get_status_code_city).to eq(200)
   end
 
 end
