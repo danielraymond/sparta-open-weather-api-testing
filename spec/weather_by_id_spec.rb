@@ -86,6 +86,14 @@ describe 'Tests for data parsed from a weather api with data selected by city id
     expect(@weatherdata.get_main_temp_max_id).to be_kind_of(Numeric)
   end
 
+  it "Main sea_level should be a float" do
+    expect(@weatherdata.get_main_sea_level_id).to be_kind_of(Numeric).or (be_nil)
+  end
+
+  it "Main grnd_level should be a float" do
+    expect(@weatherdata.get_main_grnd_level_id).to be_kind_of(Numeric).or (be_nil)
+  end
+
   it "Visibility should be an integer" do
     expect(@weatherdata.get_visibility_id).to be_kind_of(Integer).or (be_nil)
   end
@@ -96,7 +104,7 @@ describe 'Tests for data parsed from a weather api with data selected by city id
 
   it "Wind deg should be an integer between 0 and 360" do
     expect(@weatherdata.get_wind_deg_id).to be_kind_of(Numeric).or (be_nil)
-    expect(@weatherdata.get_wind_deg_id).to be_between(0,360)
+    expect(@weatherdata.get_wind_deg_id).to be_between(0,360).or (be_nil)
   end
 
   it "Clouds all should be an integer between 0 and 100" do

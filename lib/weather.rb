@@ -13,8 +13,8 @@ class Weather
     WeatherByID.new(id_file)
   end
 
-  def get_weather_by_geographic_coordinates
-    WeatherByGC.new
+  def get_weather_by_geographic_coordinates_service(lat_lon_file)
+    WeatherByGC.new(lat_lon_file)
   end
 
   def get_weather_by_zip_code

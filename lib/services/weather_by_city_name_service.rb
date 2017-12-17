@@ -129,6 +129,3 @@ class WeatherByCity
   end
 
 end
-
-# x = WeatherByCity.new
-# puts x.get_weather_by_city('London')

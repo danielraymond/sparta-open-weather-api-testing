@@ -84,6 +84,14 @@ class WeatherByID
     @weather_by_id_data['main']['temp_max']
   end
 
+  def get_main_grnd_level_id
+    @weather_by_id_data['main']['grnd_level']
+  end
+
+  def get_main_sea_level_id
+    @weather_by_id_data['main']['sea_level']
+  end
+
   def get_visibility_id
     @weather_by_id_data['visibility']
   end
@@ -129,5 +137,3 @@ class WeatherByID
   end
 
 end
-
-y = WeatherByID.new('city_id.yml')
