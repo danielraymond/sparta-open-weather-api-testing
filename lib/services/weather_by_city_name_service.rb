@@ -52,6 +52,30 @@ class WeatherByCity
     @weather_by_city_data['weather'].first['icon']
   end
 
+  def get_base_city
+    @weather_by_city_data['base']
+  end
+
+  def get_main_temperature_city
+    @weather_by_city_data['main']['temp']
+  end
+
+  def get_main_pressure_city
+    @weather_by_city_data['main']['pressure']
+  end
+
+  def get_main_humidity_city
+    @weather_by_city_data['main']['humidity']
+  end
+
+  def get_main_temp_min_city
+    @weather_by_city_data['main']['temp_min']
+  end
+
+  def get_main_temp_max_city
+    @weather_by_city_data['main']['temp_max']
+  end
+
 end
 
 # x = WeatherByCity.new

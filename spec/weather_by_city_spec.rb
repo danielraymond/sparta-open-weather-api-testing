@@ -66,4 +66,29 @@ describe 'Tests for data parsed from a weather api with data selected by city na
     expect(@weatherdata.get_weather_icon_city).to be_kind_of(String)
   end
 
+  it "Base key value should be string" do
+    expect(@weatherdata.get_base_city).to be_kind_of(String)
+  end
+
+  it "Main temperature should be a float" do
+    expect(@weatherdata.get_main_temperature_city).to be_kind_of(Float)
+  end
+
+  it "Main pressure should be a float" do
+    expect(@weatherdata.get_main_pressure_city).to be_kind_of(Integer)
+  end
+
+  it "Main humidity should be an integer between 0 and 100" do
+    expect(@weatherdata.get_main_humidity_city).to be_kind_of(Integer)
+    expect(@weatherdata.get_main_humidity_city).to be_between(0.0,100.0)
+  end
+
+  it "Main temp_min should be a float" do
+    expect(@weatherdata.get_main_temp_min_city).to be_kind_of(Float)
+  end
+
+  it "Main temp_max should be a float" do
+    expect(@weatherdata.get_main_temp_max_city).to be_kind_of(Float)
+  end
+
 end
