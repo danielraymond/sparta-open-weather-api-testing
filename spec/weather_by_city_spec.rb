@@ -91,4 +91,17 @@ describe 'Tests for data parsed from a weather api with data selected by city na
     expect(@weatherdata.get_main_temp_max_city).to be_kind_of(Float)
   end
 
+  it "Visibility should be an integer" do
+    expect(@weatherdata.get_visibility_city).to be_kind_of(Integer)
+  end
+
+  it "Wind speed should be a float" do
+    expect(@weatherdata.get_wind_speed_city).to be_kind_of(Float)
+  end
+
+  it "Wind deg should be an integer between 0 and 360" do
+    expect(@weatherdata.get_wind_deg_city).to be_kind_of(Integer)
+    expect(@weatherdata.get_wind_deg_city).to be_between(0,360)
+  end
+
 end

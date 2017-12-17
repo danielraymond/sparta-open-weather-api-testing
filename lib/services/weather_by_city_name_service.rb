@@ -76,6 +76,18 @@ class WeatherByCity
     @weather_by_city_data['main']['temp_max']
   end
 
+  def get_visibility_city
+    @weather_by_city_data['visibility']
+  end
+
+  def get_wind_speed_city
+    @weather_by_city_data['wind']['speed']
+  end
+
+  def get_wind_deg_city
+    @weather_by_city_data['wind']['deg']
+  end
+
 end
 
 # x = WeatherByCity.new
