@@ -36,6 +36,22 @@ class WeatherByCity
     @weather_by_city_data['coord']['lat']
   end
 
+  def get_weather_id_city
+    @weather_by_city_data['weather'].first['id']
+  end
+
+  def get_weather_main_city
+    @weather_by_city_data['weather'].first['main']
+  end
+
+  def get_weather_description_city
+    @weather_by_city_data['weather'].first['description']
+  end
+
+  def get_weather_icon_city
+    @weather_by_city_data['weather'].first['icon']
+  end
+
 end
 
 # x = WeatherByCity.new
