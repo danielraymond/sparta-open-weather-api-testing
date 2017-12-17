@@ -1,12 +1,20 @@
 require 'httparty'
 require 'json'
 
+
 class WeatherByCity
   include HTTParty
 
   attr_accessor :weather_by_city_data
 
   base_uri 'https://api.openweathermap.org/data/2.5/weather'
+
+  def initialize(json_file)
+    @json_file = JSON.parse(File.read(json_file))
+    x = rand (@json_file.length)
+    generated_city = @json_file[x]['CapitalName']
+    get_weather_by_city(generated_city)
+  end
 
   def get_weather_by_city(city)
     @weather_by_city_data = JSON.parse(self.class.get("?q=#{city}&APPID=14f28a90728e4b499b44fa0ba7a8f971").body)
