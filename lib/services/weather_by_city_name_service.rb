@@ -92,6 +92,34 @@ class WeatherByCity
     @weather_by_city_data['clouds']['all']
   end
 
+  def get_dt_city
+    @weather_by_city_data['dt']
+  end
+
+  def get_sys_type_city
+    @weather_by_city_data['sys']['type']
+  end
+
+  def get_sys_id_city
+    @weather_by_city_data['sys']['id']
+  end
+
+  def get_sys_message_city
+    @weather_by_city_data['sys']['message']
+  end
+
+  def get_sys_country_city
+    @weather_by_city_data['sys']['country']
+  end
+
+  def get_sys_sunrise_city
+    @weather_by_city_data['sys']['sunrise']
+  end
+
+  def get_sys_sunset_city
+    @weather_by_city_data['sys']['sunset']
+  end
+
 end
 
 # x = WeatherByCity.new

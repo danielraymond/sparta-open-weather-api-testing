@@ -109,4 +109,32 @@ describe 'Tests for data parsed from a weather api with data selected by city na
     expect(@weatherdata.get_cloud_all_city).to be_between(0,100)
   end
 
+  it "dt should be an integer" do
+    expect(@weatherdata.get_dt_city).to be_kind_of(Integer)
+  end
+
+  it "sys type should be an integer" do
+    expect(@weatherdata.get_sys_type_city).to be_kind_of(Integer)
+  end
+
+  it "sys id should be an integer" do
+    expect(@weatherdata.get_sys_id_city).to be_kind_of(Integer)
+  end
+
+  it "sys message should be a float" do
+    expect(@weatherdata.get_sys_message_city).to be_kind_of(Float)
+  end
+
+  it "sys country should be a string" do
+    expect(@weatherdata.get_sys_country_city).to be_kind_of(String)
+  end
+
+  it "sys sunrise should be an integer" do
+    expect(@weatherdata.get_sys_sunrise_city).to be_kind_of(Integer)
+  end
+
+  it "sys sunset should be an integer" do
+    expect(@weatherdata.get_sys_sunset_city).to be_kind_of(Integer)
+  end
+
 end
