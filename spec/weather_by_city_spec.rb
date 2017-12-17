@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'Tests for data parsed from a weather api with data selected by city name' do
 
   before(:all) do
-    @weatherdata = WeatherByCity.new('iso_country_data.json')
+    @weatherdata = Weather.new.get_weather_by_city_service('iso_country_data.json')
   end
 
   it "print the data at the top" do

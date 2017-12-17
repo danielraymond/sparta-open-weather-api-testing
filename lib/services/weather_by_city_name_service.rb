@@ -11,7 +11,7 @@ class WeatherByCity
 
   def initialize(json_file)
     @json_file = JSON.parse(File.read(json_file))
-    x = rand (@json_file.length)
+    x = rand (@json_file.length - 1)
     generated_city = @json_file[x]['CapitalName']
     get_weather_by_city(generated_city)
   end

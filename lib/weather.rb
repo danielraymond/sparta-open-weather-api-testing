@@ -5,12 +5,12 @@ require_relative 'services/weather_by_zip_code_service'
 
 class Weather
 
-  def get_weather_by_city_service
-    WeatherByCity.new
+  def get_weather_by_city_service(city_file)
+    WeatherByCity.new(city_file)
   end
 
-  def get_weather_by_id_service
-    WeatherByID.new
+  def get_weather_by_id_service(id_file)
+    WeatherByID.new(id_file)
   end
 
   def get_weather_by_geographic_coordinates
