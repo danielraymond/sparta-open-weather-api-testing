@@ -88,6 +88,10 @@ class WeatherByCity
     @weather_by_city_data['wind']['deg']
   end
 
+  def get_cloud_all_city
+    @weather_by_city_data['clouds']['all']
+  end
+
 end
 
 # x = WeatherByCity.new

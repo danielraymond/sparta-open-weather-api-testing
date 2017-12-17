@@ -104,4 +104,9 @@ describe 'Tests for data parsed from a weather api with data selected by city na
     expect(@weatherdata.get_wind_deg_city).to be_between(0,360)
   end
 
+  it "Clouds all should be an integer between 0 and 100" do
+    expect(@weatherdata.get_cloud_all_city).to be_kind_of(Integer)
+    expect(@weatherdata.get_cloud_all_city).to be_between(0,100)
+  end
+
 end
