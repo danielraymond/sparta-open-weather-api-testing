@@ -5,7 +5,11 @@ In order to run the tests written in this repository run rspec in the terminal b
 ```
 rspec
 ```
+Documentation and matchers for rspec can be found at the following links:
 
+[RSPEC Documentation](http://www.rubydoc.info/gems/rspec-core/frames)
+
+[RSPEC Matchers](https://relishapp.com/rspec/rspec-expectations/docs/built-in-matchers)
 ### Brief
 
 This is a service object model where data from a weather API is parsed into a ruby programme in JSON format and then tested to check the data collected is correct.
