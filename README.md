@@ -32,6 +32,33 @@ The API used can be found at the following link:
 
 [Open Weather API](http://openweathermap.org/current)
 
+### How to add new tests
+
+To add a test a method for the test must be created in the corresponding service. For the city name service an example method would be:
+
+```ruby
+def get_weather_by_city(city)
+  @weather_by_city_data = JSON.parse(self.class.get("?q=#{city}&APPID=14f28a90728e4b499b44fa0ba7a8f971").body)
+end
+
+def get_status_code_city
+  @weather_by_city_data['cod']
+end
+```
+The first method produces the data by parsing the api into the ruby file using a city name generated randomly using a json file with many example cities.
+
+The second method then returns the value of the status cod which should be 200 if the city used is a valid city name for the API.
+
+A test for this method would then look like the following in the corresponding spec file:
+
+```ruby
+it "Status code should equal 200" do
+  expect(@weatherdata.get_status_code_city).to eq(200)
+end
+```
+
+This runs the method above and checks the status is 200.
+
 ### Difficulties
 
 I had difficulties randomly generating the data initially and for the random zip code generator the gem only seems to work for particular zip codes and therefore the tests don't work for this most of the time.
