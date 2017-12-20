@@ -5,7 +5,7 @@ describe 'Tests for data parsed from a weather api with data selected by zip cod
 
   before(:all) do
     @weatherdata = Weather.new.get_weather_by_zip_code
-    @weatherdata.get_weather_by_zip_code(Faker::Address.zip)
+    @weatherdata.get_weather_by_zip_code(90210)
   end
 
   it "print the data at the top" do
